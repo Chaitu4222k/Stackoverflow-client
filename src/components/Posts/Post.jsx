@@ -93,9 +93,9 @@ const Post = ({ post }) => {
 
         <div className='post-description'>
           <p>
-            {showFullDescription ? post?.desc : `${post?.desc.slice(0, 72)}...`}
+            {showFullDescription ? post?.desc : `${post?.desc.slice(0, 50)}...`}
           </p>
-          {post?.desc.length > 72 && (
+          {post?.desc.length > 50 && (
             <button className='see-more-btn' onClick={toggleDescription}>
               {showFullDescription ? 'See Less' : 'See More..'}
             </button>
@@ -111,6 +111,7 @@ const Post = ({ post }) => {
                 <video src={post?.videoUrl} controls />
             }
           </div>
+          
           <div className='post-bottom'>
             <div className='post-options'>
               {isLiked ?
@@ -123,6 +124,7 @@ const Post = ({ post }) => {
               <span className='post-comments'>{post?.comments.length} comments</span>
             </div>
           </div>
+
           {showCommentModal && (
             <div className='modal'>
               <textarea
@@ -137,22 +139,22 @@ const Post = ({ post }) => {
               <button className='cancel-comment-btn' onClick={() => setShowCommentModal(false)}>Cancel</button>
             </div>
           )}
-<div className='post-comments-section'>
+          <div className='post-comments-section'>
             <h1>Comments</h1>
             <hr />
             <ul className='comments-list'>
               {post?.comments?.map((comment) => (
                 <li key={comment.commentId}>
                   <div className='comment-container'>
-                    {comment.name && ( 
-                    <div className='avatar-container'>
-                      <Link to={'/'} style={{ textDecoration: 'none' }}>
-                        <Avatar className='avatar' backgroundColor="orange" px='7px' py="6px" borderRadius='50%' fontSize='15px' >
-                          {comment.name.charAt(0).toUpperCase()}
-                        </Avatar>
-                      </Link>
-                      <p className='comment-user-name'>{comment.name}</p>
-                    </div>)}
+                    {comment.name && (
+                      <div className='avatar-container'>
+                        <Link to={'/'} style={{ textDecoration: 'none' }}>
+                          <Avatar className='avatar' backgroundColor="orange" px='7px' py="6px" borderRadius='50%' fontSize='15px' >
+                            {comment.name.charAt(0).toUpperCase()}
+                          </Avatar>
+                        </Link>
+                        <p className='comment-user-name'>{comment.name}</p>
+                      </div>)}
                     <p className='comment-content'>{comment.content}</p>
                     {comment.userId === User?.result._id || post.userId === User?.result._id ? (
                       <button onClick={() => handleDeleteComment(comment.commentId)}>

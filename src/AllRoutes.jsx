@@ -14,7 +14,6 @@ import DisplayQuestion from './Pages/Questions/DisplayQuestion';
 import Tags from './Pages/Tags/Tags';
 import Users from './Pages/Users/Users';
 import UserProfile from './Pages/UserProfile/UserProfile';
-import Chatbot from './Pages/Authentication/Otp';
 import Payment from './Pages/Subscription/Payment';
 import Community from './Pages/SocialCommunity/Community';
 import CommunityPost from './Pages/SocialCommunity/CommunityPost';
@@ -32,7 +31,6 @@ const AllRoutes = () => {
       <Route path='/Tags' element={<Tags />} />
       <Route path='/Users' element={<Users />} />
       <Route path='/Users/:id' element={<UserProfile />} />
-      <Route path='/Chatbot' element={User !== null ? <Chatbot /> :<Login/>} /> 
       <Route path='/Payment' element={<Payment />} />
       <Route path='/Community' element={User !== null ? <Community />:<Login/>} />
       <Route path='/Community/:id' element={<CommunityPost />} />

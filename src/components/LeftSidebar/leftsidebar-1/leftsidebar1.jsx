@@ -44,10 +44,6 @@ const LeftSidebar1 = () => {
                   <p>Users</p>
                 </NavLink>
 
-                <NavLink to="/Chatbot" className="side-nav1-links" activeclassname="active" style={{ paddingLeft: "40px" }} >
-                  <p>Chat Bot</p>
-                </NavLink>
-
                 <NavLink to="/Community" className="side-nav1-links" activeclassname="active" style={{ paddingLeft: "40px" }} >
                   <p>Stack Community</p>
                 </NavLink>

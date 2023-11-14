@@ -21,8 +21,9 @@
 
 .stackhome-left,
 .stackhome-right {
-    width: 50%;
+    width: 90%;
     padding-top: 8%;
+    margin: auto;
 }
 
 .stackmessage-content,
@@ -39,7 +40,7 @@
 .stackhome-message {
     margin: auto;
     position: relative;
-    width: 70%;
+    width: 90%;
     min-height: 40vh;
     border-radius: 10px;
     box-shadow: 4px 4px 0 rgba(0, 0, 0, .2);

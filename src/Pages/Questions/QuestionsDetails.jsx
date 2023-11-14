@@ -25,8 +25,7 @@ const QuestionDetails = () => {
     const User = useSelector((state) => (state.currentUserReducer));
 
     const location = useLocation();
-    const url = 'https://stackoverflow-g6az.onrender.com';
-    // const url = 'http://localhost:3000/';
+    const url = 'http://localhost:3000/';
 
     // ===================================== To handle posted answer (Line no-169) ===================================================
     const handlePostAns =  (e, answerLength) =>{

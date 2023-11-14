@@ -35,7 +35,7 @@ const Home1 = () => {
                     </div>
                 </div>
 
-                <div className='stackhome-right'>
+                {/* <div className='stackhome-right'>
                     <div className="stackhome-message-1">
                         <div className='stackmessage-top-1'>
                             <img src={robot} alt='imag' />
@@ -49,17 +49,18 @@ const Home1 = () => {
                         <div className="stackhome-message-arrow-1">
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className='pricing'>
+                </div> */}
+            </div>    
+            
+            {/* <div className='pricing'>
                 <a href='#pricing'> <p>Purchase the Subscription to get more features in affordable prices</p></a>
-                </div>
+                </div> */}
 
             </div>
 
-            <div className='home-subscription' id='pricing'>
+            {/* <div className='home-subscription' id='pricing'>
                 <Payment/>
-            </div>
+            </div> */}
         </>
     )
 }
